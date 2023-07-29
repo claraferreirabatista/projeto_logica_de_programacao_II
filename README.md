@@ -55,7 +55,7 @@ O programa irá guiá-lo através das opções disponíveis e solicitará as inf
 ## Requisitos
 
 - Python 3.x
-- Bibliotecas: (lista das bibliotecas necessárias, caso existam)
+- Bibliotecas: ainda em desenvolvimento
 
 ## Contribuições
 
