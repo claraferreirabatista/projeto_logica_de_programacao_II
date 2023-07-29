@@ -45,7 +45,7 @@ Este projeto é parte da avaliação proposta pelo curso ADA na turma de Data Sc
 Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python instalado em sua máquina. Clone este repositório e execute o arquivo principal do projeto.
 
 ```bash
-git clone (https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git) [https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git]
+git clone https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git
 cd projeto_logica_de_programacao_II
 python main.py
 ```
