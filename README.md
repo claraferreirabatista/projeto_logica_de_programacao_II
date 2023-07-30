@@ -1,4 +1,6 @@
 ## EM DESENVOLVIMENTO
+![image](https://github.com/claraferreirabatista/projeto_logica_de_programacao_II/assets/117992801/484ca002-0562-42af-8089-6571fe4d2ebf)
+
 
 # Projeto Python - Sistema de Gerenciamento de Vendas
 
