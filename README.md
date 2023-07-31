@@ -1,12 +1,7 @@
 ## EM DESENVOLVIMENTO
 ![image](https://github.com/claraferreirabatista/projeto_logica_de_programacao_II/assets/117992801/484ca002-0562-42af-8089-6571fe4d2ebf)
 
-
 # Projeto Python - Sistema de Gerenciamento de Vendas
-
-# Readme - Sistema de Vendas
-
-Este é um simples sistema de vendas implementado em Python. O sistema permite criar, listar e excluir vendas, além de encontrar o melhor vendedor e o produto mais vendido de um determinado mês e ano.
 
 ## Funcionamento
 
@@ -24,10 +19,6 @@ Além disso, o sistema possui algumas funções auxiliares:
 - `validar_data(data)`: Função básica para validar o formato de uma data no padrão "dd/mm/aaaa".
 - `converter_data(data_str)`: Função para converter uma data no formato de string para o formato de data.
 - `excluir_venda_por_id(id_venda)`: Função para excluir uma venda pelo seu ID.
-
-## Uso do Sistema
-
-O sistema inicia com alguns dados de exemplo pré-carregados, como vendedores e produtos, representados pelas classes `Vendedor` e `Produto`, respectivamente. Esses dados estão organizados em listas e dicionários para facilitar a manipulação.
 
 ### Listagem de Vendas
 
@@ -47,15 +38,6 @@ Após a criação ou listagem das vendas, o sistema pergunta se o usuário desej
 
 Ao final, o sistema pergunta ao usuário o ano e o mês para os quais deseja encontrar o melhor vendedor e o produto mais vendido. Em seguida, ele realiza uma busca nas vendas existentes e mostra o vendedor com o maior valor total de vendas no período e o produto mais vendido no mesmo período, juntamente com o valor total de vendas desse produto.
 
-## Observações
-
-1. Os dados de vendedores, produtos e vendas são fornecidos como exemplos no início do programa, mas você pode modificar, adicionar ou excluir dados conforme necessário.
-2. A validação do CPF e da data fornecida é básica e implementada apenas para fins ilustrativos. Em um sistema real, você deve usar bibliotecas ou métodos mais robustos para validação.
-3. O sistema não armazena dados em um banco de dados permanente; todas as vendas serão perdidas quando o programa for encerrado.
-
-Espero que este sistema de vendas seja útil! Se tiver alguma dúvida ou sugestão de melhoria, não hesite em entrar em contato.
-
-
 ## Como Usar
 
 Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python instalado em sua máquina. Clone este repositório e execute o arquivo principal do projeto.
@@ -63,7 +45,7 @@ Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python i
 ```bash
 git clone https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git
 cd projeto_logica_de_programacao_II
-python main.py
+python index.py
 ```
 
 O programa irá guiá-lo através das opções disponíveis e solicitará as informações necessárias para cada funcionalidade.
@@ -78,4 +60,4 @@ Contribuições para melhorias e correções são bem-vindas! Sinta-se à vontad
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT license](LINCENSE).
+Este projeto está licenciado sob a [MIT license](LICENSE).
