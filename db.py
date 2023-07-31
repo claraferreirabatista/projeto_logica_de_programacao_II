@@ -11,8 +11,6 @@ vendedores = (
 )
 
 # Definindo a classe Produto
-
-
 class Produto:
     def __init__(self, id_produto, nome, valor):
         self.id_produto = id_produto
