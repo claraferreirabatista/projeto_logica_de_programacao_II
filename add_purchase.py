@@ -2,18 +2,16 @@ from datetime import datetime
 import random
 from db import *
 
-
 def validar_cpf(cpf):
-    # Implementação básica de validação do CPF (apenas para fins ilustrativos)
-    # Remover pontos e traços, se houver
+# Implementação básica de validação do CPF (apenas para fins ilustrativos)
+# Remover pontos e traços, se houver
     cpf = cpf.replace('.', '').replace('-', '')
     if not cpf.isdigit() or len(cpf) != 11:
         return False
     return True  # Retornar True se o CPF for válido
 
-
 def validar_data(data):
-    # Implementação básica de validação da data (apenas para fins ilustrativos)
+# Implementação básica de validação da data (apenas para fins ilustrativos)
     try:
         dia, mes, ano = map(int, data.split('/'))
         if 1 <= dia <= 31 and 1 <= mes <= 12 and 2010 <= ano <= 2023:
@@ -22,7 +20,6 @@ def validar_data(data):
             return False
     except ValueError:
         return False
-
 
 def inclui_venda():
 

@@ -17,7 +17,6 @@ class Produto:
         self.nome = nome
         self.valor = valor
 
-
 # Mock de produtos (mantemos o mesmo do exemplo anterior)
 produtos = [
     Produto(101, "Smartphone Modelo X", 1500.00),
@@ -39,7 +38,6 @@ produtos = [
 
 # Definindo a classe Venda
 
-
 class Venda:
     def __init__(self, venda_ID, vendedor):
         self.venda_ID = venda_ID
@@ -47,8 +45,7 @@ class Venda:
         self.produtos = {}  # Dicionário que armazena os produtos e suas quantidades
         self.valor_total_da_venda = 0
 
-
-    # Método para adicionar produtos à venda
+# Método para adicionar produtos à venda
     def adicionar_produto(self, produto, quantidade):
         if quantidade <= 0:
             raise ValueError("A quantidade deve ser maior que zero.")
