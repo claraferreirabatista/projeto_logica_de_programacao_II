@@ -58,74 +58,37 @@ Data da venda
 Informações opcionais
 
 Crie uma função que calcule o valor total e o valor médio das vendas em um determinado mês.
-organizar a lista de obejetos por ano, depois por mês 
-pegar o valor de cada comprar do mês, sumar 
-printar o rendimento mensal
-e o valor médio de cada mês
 
 
-Crie uma função para descobrir quem foi o vendedor que obteve o maior faturamento do mês. A função deve permitir ao usuário definir o mês e o ano desejados.
-crie uma função para separar anos, e meses, aproveitando a questão anterior 
-input de qual mes e ano
-buscar dentro da lista criada as vendas do vendedor x 
-agrupa-la e cria uma lista com as vendas do vendedor
-somar o rendimento mensal de cada vendedor
-e cria hanking qual total de vendas maior para menor
-printa os 3 primeiro  vendedores
+
+Crie uma função para descobrir quem foi o vendedor que obteve o maior faturamento do mês. A função deve 
 
 Crie uma função para descobrir qual foi o produto mais vendido no mês.
-fazer mesmo processo da questõa anterior mas agora com produto
 
-Crie uma função para salvar os dados em um arquivo.
+
 
 Crie uma função para converter os valores dos produtos em Dólar e salvar em um novo arquivo (Utilizando Função geradora).
 
-Entendido! Vamos criar um planejamento para o projeto de Data Science da loja que guarda todas as vendas e realiza análises para identificar os vendedores com mais vendas e os produtos mais vendidos. Faremos tudo em Python e atenderemos aos requisitos especificados.
+## Aqui está uma breve explicação de cada parte do código: ##
 
-**Passo a passo do projeto:**
+Vendedor class: Essa classe representa um vendedor e possui um atributo nome para armazenar o nome do vendedor.
 
-1. **Definir a estrutura de dados:**
-   - Criar classes para representar os objetos venda, vendedor e produto.
-   - Implementar a estrutura de lista para armazenar todas as vendas.
+Produto class: Essa classe representa um produto e possui três atributos: id_produto, nome e valor. Cada produto é identificado por um ID único e possui um nome e um valor associado.
 
-2. **Criar o banco de dados mock para os produtos disponíveis:**
-   - Criar um dicionário onde as chaves serão os IDs dos produtos e os valores serão objetos que contêm as informações do produto (nome, valor, etc.).
+Venda class: Essa classe representa uma venda e tem os seguintes atributos:
 
-3. **Função para gerar IDs aleatórios de venda e produto:**
-   - Criar uma função para gerar IDs aleatórios com 4 e 5 dígitos para venda e produto, respectivamente.
+venda_ID: ID único da venda.
+vendedor: Objeto da classe Vendedor, representa o vendedor responsável pela venda.
+produtos: Um dicionário que armazena os produtos vendidos e suas quantidades.
+valor_total_da_venda: O valor total da venda, que é calculado somando o valor dos produtos vendidos.
+Além disso, a classe possui um método adicionar_produto que permite adicionar produtos à venda e atualizar o valor total da venda.
 
-4. **Função para incluir novas vendas:**
-   - Criar uma função para permitir ao usuário incluir novas vendas.
-   - Solicitar ao usuário todos os campos necessários para criar uma venda (nome do vendedor, CPF do comprador, data, etc.).
-   - Tratar possíveis erros de preenchimento incorreto.
+Funções de validação: Existem duas funções de validação no código, validar_cpf e validar_data, que são usadas para verificar a validade de um CPF e de uma data, respectivamente. Essas funções são usadas para garantir que os dados inseridos pelo usuário durante a criação de uma nova venda sejam válidos.
 
-5. **Função para incluir produtos em uma venda:**
-   - Após criar a venda, solicitar ao usuário o ID do produto e a quantidade que deseja incluir.
-   - Buscar as informações do produto no banco de dados mock e adicionar à venda.
+Mock de vendedores, produtos e vendas: No início do código, existem mocks (dados fictícios) de vendedores, produtos e vendas para fins de exemplo. Isso permite que o código tenha algumas informações de vendas predefinidas para simular um cenário real.
 
-6. **Implementar estrutura de controle para inclusão de múltiplos produtos:**
-   - Permitir ao usuário incluir vários produtos na mesma venda, repetindo a ação até que ele indique que não deseja mais incluir.
+Criação de novas vendas: O código permite que o usuário crie novas vendas interativamente. Ele solicita informações como o nome do vendedor, CPF do comprador, data da venda e os produtos vendidos, verificando se as entradas são válidas antes de adicionar a venda à lista de vendas.
 
-7. **Função para acessar vendas por ano e mês:**
-   - Criar uma função para que o usuário informe o ano e o mês desejado.
-   - Exibir todas as vendas realizadas naquele mês e ano específicos.
+Exclusão de vendas: O código também permite que o usuário exclua uma venda existente informando o ID da venda.
 
-8. **Análise das vendas por vendedor:**
-   - Calcular o rendimento do vendedor para um determinado mês.
-   - Identificar o vendedor que realizou mais vendas naquele mês.
-
-9. **Análise das vendas por produto:**
-   - Somar as vendas de cada produto para um determinado mês.
-   - Identificar os três produtos mais vendidos naquele mês.
-
-10. **Opção para excluir vendas:**
-    - Criar uma opção para o usuário excluir vendas do banco de dados.
-
-11. **Opção para excluir produtos de uma venda:**
-    - Criar uma opção para o usuário remover produtos de uma venda já realizada.
-
-12. **Menu principal e interface de interação com o usuário:**
-    - Criar um menu para que o usuário escolha as opções disponíveis (incluir venda, acessar vendas, excluir venda, etc.).
-    - Implementar uma interface amigável para guiar o usuário durante as interações.
-
-Com esse planejamento, teremos um projeto bem estruturado para uma loja que realiza vendas e armazena todas as informações necessárias para análises de vendas por vendedor, produto e período específico. O projeto será bastante detalhado e lógico, atendendo aos requisitos de um desenvolvedor iniciante em Data Science utilizando apenas Python sem bibliotecas externas.
+Impressão das vendas: Ao final do código, ele imprime todas as vendas registradas, incluindo as novas vendas criadas pelo usuário.
