@@ -27,10 +27,6 @@ def validar_data(data):
 def inclui_venda():
 
     while True:
-        resposta = input("Deseja criar uma venda? (s/n): ").lower()
-        if resposta not in {'s', 'sim'}:
-            break
-
         venda_ID = random.randint(1008, 9999)
         vendedor_nome = input("Digite o nome do vendedor: ")
         vendedor_encontrado = None
@@ -90,8 +86,17 @@ def inclui_venda():
             "total_da_venda": nova_venda.valor_total_da_venda
         })
 
+        print(f"\n Venda ID: {vendas[-1]['id_venda']}")
+        print(f"Nome do Vendedor: {vendas[-1]['Nome do Vendedor']}")
+        print(f"CPF do Comprador: {vendas[-1]['CPF do Comprador']}")
+        print(f"Data da Venda: {vendas[-1]['Data da Venda']}")
+        print("Produtos:")
+        for produto in vendas[-1]['Produtos']:
+            print(f"- Produto ID: {produto['produto_id']}")
+            print(f"  Nome do Produto: {produto['nome_do_produto']}")
+            print(f"  Valor do Produto: R$ {produto['valor_do_produto']:.2f}")
+        print(f"Total da Venda: R$ {vendas[-1]['total_da_venda']:.2f}\n")
+
         resposta = input("Deseja realizar outra venda? (s/n): ").lower()
         if resposta not in {'s', 'sim'}:
             break
-
-
