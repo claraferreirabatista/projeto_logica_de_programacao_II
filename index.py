@@ -17,18 +17,6 @@ for venda in vendas:
 
 
 
-for venda in vendas:
-    print(f"Venda ID: {venda['id_venda']}")
-    print(f"Nome do Vendedor: {venda['Nome do Vendedor']}")
-    print(f"CPF do Comprador: {venda['CPF do Comprador']}")
-    print(f"Data da Venda: {venda['Data da Venda']}")
-    print("Produtos:")
-    for produto in venda['Produtos']:
-        print(f"- Produto ID: {produto['produto_id']}")
-        print(f"  Nome do Produto: {produto['nome_do_produto']}")
-        print(f"  Valor do Produto: R$ {produto['valor_do_produto']:.2f}")
-    print(f"Total da Venda: R$ {venda['total_da_venda']:.2f}\n")
-    print()
 
 
 def excluir_venda_por_id(id_venda):
