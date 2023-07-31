@@ -29,8 +29,6 @@ def validar_data(data):
         return False
 
 
-
-
 # Imprimindo o mock de vendas
 for venda in vendas:
     print(f"Venda ID: {venda['id_venda']}")
