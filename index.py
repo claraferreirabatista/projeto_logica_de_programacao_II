@@ -2,46 +2,6 @@ from datetime import datetime
 import random
 import db
 
-# Imprimindo o mock de vendas
-for venda in vendas:
-    print(f"Venda ID: {venda['id_venda']}")
-    print(f"Nome do Vendedor: {venda['Nome do Vendedor']}")
-    print(f"CPF do Comprador: {venda['CPF do Comprador']}")
-    print(f"Data da Venda: {venda['Data da Venda']}")
-    print("Produtos:")
-    for produto in venda['Produtos']:
-        print(f"- Produto ID: {produto['produto_id']}")
-        print(f"  Nome do Produto: {produto['nome_do_produto']}")
-        print(f"  Valor do Produto: R$ {produto['valor_do_produto']:.2f}")
-    print(f"Total da Venda: R$ {venda['total_da_venda']:.2f}\n")
-
-
-
-
-
-def excluir_venda_por_id(id_venda):
-    global vendas  # Permite que a função acesse a variável global 'vendas'
-    for i, venda in enumerate(vendas):
-        if venda['id_venda'] == id_venda:
-            del vendas[i]
-            return True
-    return False
-
-
-while True:
-    resposta = input("Deseja excluir uma venda? (s/n): ").lower()
-    if resposta not in {'s', 'sim'}:
-        break
-
-    id_venda_excluir = int(input("Digite o ID da venda que deseja excluir: "))
-    if excluir_venda_por_id(id_venda_excluir):
-        print(f"Venda com ID {id_venda_excluir} excluída com sucesso.")
-    else:
-        print(f"Venda com ID {id_venda_excluir} não encontrada.")
-
-print("Obrigada por usar o programa!")
-
-
 # Função para converter a data digitada pelo usuário em formato de string para formato de data
 
 def converter_data(data_str):
