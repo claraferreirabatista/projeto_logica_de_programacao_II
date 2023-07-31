@@ -1,6 +1,6 @@
 """
 """
-from vendas import inclui_venda
+from add_purchase import inclui_venda
 
 while True:
     resposta = input( "Escolha as opções, digite o respectivo número da sua opção: \n 1. Incluir venda? \n 2. Excluir venda? \n 3. Qual vendedor foi mais rentável? \n 4. Qual produto foi o mais vendido? \n 5. Mostrar todas as vendas? \n 6. Sair do programa? \n "
