@@ -1,6 +1,7 @@
 """
 """
 from add_purchase import inclui_venda
+from del_purchase import exclui_venda
 
 while True:
     resposta = input( "Escolha as opções, digite o respectivo número da sua opção: \n 1. Incluir venda? \n 2. Excluir venda? \n 3. Qual vendedor foi mais rentável? \n 4. Qual produto foi o mais vendido? \n 5. Mostrar todas as vendas? \n 6. Sair do programa? \n "
@@ -10,6 +11,7 @@ while True:
         inclui_venda()
     elif resposta == '2':
         print("Opção escolhida 2")
+        exclui_venda()
     elif resposta == '3':
         print("Opção escolhida 3")
     elif resposta == '4':
