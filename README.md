@@ -78,4 +78,4 @@ Contribuições para melhorias e correções são bem-vindas! Sinta-se à vontad
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT license](LINCENSE) (se aplicável).
+Este projeto está licenciado sob a [MIT license](LINCENSE).
