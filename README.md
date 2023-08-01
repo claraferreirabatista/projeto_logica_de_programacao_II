@@ -63,4 +63,4 @@ Contribuições para melhorias e correções são bem-vindas! Sinta-se à vontad
 Este projeto está licenciado sob a [MIT license](LICENSE).Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 
-[![Linkedin Badge](https://img.shields.io/badge/-Clara%20Ferreira-ff512f?style=flat-square&logo=Linkedin&logoColor=white&color=blue&link=https://www.linkedin.com/in/clara-ferreira-batista/)]
+[Linkedin Badge](https://img.shields.io/badge/-Clara%20Ferreira-ff512f?style=flat-square&logo=Linkedin&logoColor=white&color=blue&link=https://www.linkedin.com/in/clara-ferreira-batista/)
