@@ -279,3 +279,17 @@ vendas = [
     "total_da_venda": (produtos[1].valor * 4) + produtos[8].valor + (produtos[11].valor * 3)
 }
 ]
+
+def imprimir_vendas(vendas):
+    print("==== VENDAS REALIZADAS ====\n")
+    for venda in vendas:
+        print(f"ID da Venda: {venda['id_venda']}")
+        print(f"Nome do Vendedor: {venda['Nome do Vendedor']}")
+        print(f"CPF do Comprador: {venda['CPF do Comprador']}")
+        print(f"Data da Venda: {venda['Data da Venda']}")
+        print("Produtos:")
+        for produto in venda['Produtos']:
+            print(f"- {produto['nome_do_produto']} (Quantidade: {produto['quantidade']})")
+        print(f"Total da Venda: R${venda['total_da_venda']:.2f}")
+        print("============================\n")
+
