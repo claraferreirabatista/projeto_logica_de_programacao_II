@@ -15,7 +15,7 @@ while True:
     \n 4. Ou, quer saber o nosso produto mais vendido?
     \n 5. Mostrar todas as vendas?
     \n 6. Criar um arquivo?
-    \n 7. Criar um arquivo, das convertidas em dólar $$ ?
+    \n 7. Criar um arquivo, moeda atual convertidas em dólar $$ ?
     \n 8. Sair do programa? \n
      """
                      )
