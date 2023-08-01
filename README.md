@@ -36,19 +36,13 @@ O projeto possui as seguintes funcionalidades:
 
 6. Para encerrar o programa, escolha a opção "8" no menu.
 
-## Como usar
+Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python instalado em sua máquina. Clone este repositório e execute o arquivo principal do projeto.
 
-1. Certifique-se de que o Python esteja instalado em seu sistema.
-
-2. Faça o download de todos os arquivos do projeto, incluindo `add_purchase.py`, `del_purchase.py`, `best_seller.py`, `utils.py`, `best_product.py`, e `index.py`.
-
-3. Execute o arquivo `index.py` para iniciar o programa.
-
-4. O programa mostrará um menu com as opções numeradas, onde você pode escolher a ação que deseja realizar.
-
-5. Siga as instruções do programa para inserir os dados necessários ou visualizar as informações desejadas.
-
-6. Para encerrar o programa, escolha a opção "6" no menu.
+```bash
+git clone https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git
+cd projeto_logica_de_programacao_II
+python3 index.py
+```
 
 ## Observações
 
@@ -59,22 +53,6 @@ Esperamos que este projeto seja útil para gerenciar suas vendas e fornecer insi
 Por fazer parte de um processo avaliativo ele não segue os preceitos do Clean Code, por isso tem vários comentários ao decorrer de cada módulo.
 
 Obrigado por usar meu programa!
-
-## Como Usar
-
-Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python instalado em sua máquina. Clone este repositório e execute o arquivo principal do projeto.
-
-```bash
-git clone https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git
-cd projeto_logica_de_programacao_II
-python3 index.py
-```
-
-O programa irá guiá-lo através das opções disponíveis e solicitará as informações necessárias para cada funcionalidade.
-
-## Requisitos
-
-- Python 3.x
 
 ## Contribuições
 
