@@ -1,42 +1,47 @@
 ## EM DESENVOLVIMENTO
 ![image](https://github.com/claraferreirabatista/projeto_logica_de_programacao_II/assets/117992801/484ca002-0562-42af-8089-6571fe4d2ebf)
 
-# Projeto Python - Sistema de Gerenciamento de Vendas
+# Projeto de Gestão de Vendas
 
-## Funcionamento
+Este é um projeto simples de gestão de vendas que permite ao usuário interagir com algumas funcionalidades relacionadas a vendas, produtos e vendedores. O programa é executado em um loop, onde o usuário pode escolher entre várias opções para realizar diferentes tarefas.
 
-O sistema é composto por três classes principais:
+## Funcionalidades
 
-1. **Vendedor**: Representa um vendedor com seu nome.
+O projeto possui as seguintes funcionalidades:
 
-2. **Produto**: Representa um produto com um ID, nome e valor.
+1. **Incluir uma venda:** Permite ao usuário adicionar uma nova venda ao sistema, inserindo as informações relevantes da venda.
 
-3. **Venda**: Representa uma venda, contendo um ID da venda, o vendedor responsável, os produtos vendidos e o valor total da venda.
+2. **Excluir uma venda:** Permite ao usuário excluir uma venda existente no sistema com base no ID da venda.
 
-Além disso, o sistema possui algumas funções auxiliares:
+3. **Mostrar os melhores vendedores:** Esta opção exibirá os vendedores que mais venderam no período registrado.
 
-- `validar_cpf(cpf)`: Função básica para validar o formato de um CPF.
-- `validar_data(data)`: Função básica para validar o formato de uma data no padrão "dd/mm/aaaa".
-- `converter_data(data_str)`: Função para converter uma data no formato de string para o formato de data.
-- `excluir_venda_por_id(id_venda)`: Função para excluir uma venda pelo seu ID.
+4. **Mostrar o produto mais vendido:** Esta opção mostrará o produto que foi mais vendido no período registrado.
 
-### Listagem de Vendas
+5. **Mostrar todas as vendas:** Exibe todas as vendas registradas no sistema.
 
-O programa inicia imprimindo uma lista de vendas existentes, cada uma identificada pelo seu ID, nome do vendedor, CPF do comprador, data da venda, produtos vendidos e o total da venda.
+6. **Sair do programa:** Permite ao usuário encerrar a execução do programa.
 
-### Criar uma Nova Venda
+## Como usar
 
-Em seguida, o programa pergunta se deseja criar uma nova venda. Caso a resposta seja afirmativa, o usuário é solicitado a fornecer os dados da venda, incluindo o nome do vendedor, CPF do comprador, data da venda e os produtos vendidos. O sistema também valida o CPF e a data fornecida pelo usuário.
+1. Certifique-se de que o Python esteja instalado em seu sistema.
 
-O usuário pode inserir um ou mais produtos na venda, sendo necessário informar o ID do produto e a quantidade desejada. O sistema verifica se o produto existe na lista de produtos carregados anteriormente.
+2. Faça o download de todos os arquivos do projeto, incluindo `add_purchase.py`, `del_purchase.py`, `best_seller.py`, `utils.py`, `best_product.py`, e `index.py`.
 
-### Excluir uma Venda Existente
+3. Execute o arquivo `index.py` para iniciar o programa.
 
-Após a criação ou listagem das vendas, o sistema pergunta se o usuário deseja excluir uma venda. Se a resposta for afirmativa, o usuário deve fornecer o ID da venda que deseja excluir. O sistema buscará a venda correspondente pelo ID e, se encontrada, a excluirá da lista de vendas.
+4. O programa mostrará um menu com as opções numeradas, onde você pode escolher a ação que deseja realizar.
 
-### Encontrar o Melhor Vendedor e Produto Mais Vendido
+5. Siga as instruções do programa para inserir os dados necessários ou visualizar as informações desejadas.
 
-Ao final, o sistema pergunta ao usuário o ano e o mês para os quais deseja encontrar o melhor vendedor e o produto mais vendido. Em seguida, ele realiza uma busca nas vendas existentes e mostra o vendedor com o maior valor total de vendas no período e o produto mais vendido no mesmo período, juntamente com o valor total de vendas desse produto.
+6. Para encerrar o programa, escolha a opção "6" no menu.
+
+## Observações
+
+Este projeto foi desenvolvido com base em um conjunto específico de funcionalidades e requisitos. Caso deseje expandir o projeto com novas funcionalidades ou aprimorá-lo, sinta-se à vontade para modificar os arquivos existentes ou adicionar novos módulos de acordo com suas necessidades.
+
+Esperamos que este projeto seja útil para gerenciar suas vendas e fornecer insights sobre o desempenho dos vendedores e produtos. Se tiver alguma dúvida ou sugestão, não hesite em entrar em contato conosco!
+
+Obrigado por usar nosso programa!
 
 ## Como Usar
 
@@ -45,7 +50,7 @@ Para utilizar o Sistema de Gerenciamento de Vendas, você precisará do Python i
 ```bash
 git clone https://github.com/claraferreirabatista/projeto_logica_de_programacao_II.git
 cd projeto_logica_de_programacao_II
-python index.py
+python3 index.py
 ```
 
 O programa irá guiá-lo através das opções disponíveis e solicitará as informações necessárias para cada funcionalidade.
