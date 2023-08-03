@@ -1,11 +1,8 @@
-# Importa o módulo 'db', que contém uma lista chamada 'vendas' com informações das vendas, e outros módulos necessários
 from db import *
 from utils import obter_ano_mes
 from datetime import datetime
 
 # Função para calcular os 3 melhores vendedores com base no ano e mês informados
-
-
 def calcular_melhores_vendedores(ano, mes):
     # Cria um dicionário para armazenar as vendas de cada vendedor
     vendas_por_vendedor = {}
@@ -18,8 +15,8 @@ def calcular_melhores_vendedores(ano, mes):
         # Verifica se a venda pertence ao ano e mês informados
         if data_venda.year == ano and data_venda.month == mes:
             # Obtém o nome do vendedor e o valor da venda
-            nome_vendedor = venda["Nome do Vendedor"]
-            valor_venda = venda["total_da_venda"]
+            nome_vendedor = venda["Vendedor"]  # Correção aqui
+            valor_venda = venda["total_da_venda"]  # Correção aqui
 
             # Se o nome do vendedor já estiver no dicionário, adiciona o valor da venda ao total existente
             if nome_vendedor in vendas_por_vendedor:
@@ -42,8 +39,6 @@ def calcular_melhores_vendedores(ano, mes):
     return melhores_vendedores
 
 # Função para exibir os três melhores vendedores do mês atual
-
-
 def mostrar_melhores_vendedores():
     # Obtém o ano e mês atual usando a função 'obter_ano_mes' do módulo 'utils'
     ano, mes = obter_ano_mes()

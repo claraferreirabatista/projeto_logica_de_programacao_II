@@ -6,7 +6,7 @@ from unidecode import unidecode
 
 # Função que remove acentos e coloca em letras minúsculas
 def trata_nome(nome):
-    return unidecode(nome).lower() 
+    return unidecode(nome).lower()
 
 # Função para validar um CPF (apenas para fins ilustrativos)
 def validar_cpf(cpf):
@@ -29,6 +29,8 @@ def validar_data(data):
             return False
     except ValueError:
         return False
+
+# ... (Código anterior)
 
 # Função para incluir uma nova venda
 def inclui_venda():
@@ -90,26 +92,20 @@ def inclui_venda():
 
         # Adiciona a venda à lista de vendas
         vendas.append({
-            "id_venda": nova_venda.venda_ID,
-            "Nome do Vendedor": nova_venda.vendedor.nome,
+            "id_venda": nova_venda.id_venda,
+            "Vendedor": nova_venda.vendedor.nome,
             "CPF do Comprador": cpf_comprador,
             "Data da Venda": data_venda,
-            "Produtos": [
-                {
-                    "produto_id": produto.id_produto,
-                    "nome_do_produto": produto.nome,
-                    "valor_do_produto": produto.valor
-                }
-                # Cria uma lista de dicionários com informações dos produtos vendidos
-                # usando a lista de produtos da instância de Venda criada
-                for produto, quantidade in nova_venda.produtos.items()
-            ],
+            "Produtos": [{"produto_id": produto['produto'].id_produto,
+                          "nome_do_produto": produto['produto'].nome,
+                          "valor_do_produto": produto['produto'].valor,
+                          "quantidade": produto['quantidade']} for produto in nova_venda],
             "total_da_venda": nova_venda.valor_total_da_venda
         })
 
         # Imprime informações sobre a venda realizada
-        print(f"\n Venda ID: {vendas[-1]['id_venda']}")
-        print(f"Nome do Vendedor: {vendas[-1]['Nome do Vendedor']}")
+        print(f"\nVenda ID: {vendas[-1]['id_venda']}")
+        print(f"Nome do Vendedor: {vendas[-1]['Vendedor']}")
         print(f"CPF do Comprador: {vendas[-1]['CPF do Comprador']}")
         print(f"Data da Venda: {vendas[-1]['Data da Venda']}")
         print("Produtos:")

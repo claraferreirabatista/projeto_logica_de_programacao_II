@@ -12,8 +12,6 @@ vendedores = (
 )
 
 # Definindo a classe Produto
-
-
 class Produto:
     def __init__(self, id_produto, nome, valor):
         self.id_produto = id_produto
@@ -39,31 +37,43 @@ produtos = [
     Produto(115, "Câmera de Segurança IP", 250.00)
 ]
 
-
-# Definindo a classe Venda
 class Venda:
-    def __init__(self, venda_ID, vendedor):
-        self.venda_ID = venda_ID
+    def __init__(self, id_venda, vendedor):
+        self.id_venda = id_venda
         self.vendedor = vendedor
-        self.produtos = {}
+        self.produtos = []
         self.valor_total_da_venda = 0
 
-# Método para adicionar produtos à venda
+    # Método para adicionar produtos à venda
     def adicionar_produto(self, produto, quantidade):
         if quantidade <= 0:
             raise ValueError("A quantidade deve ser maior que zero.")
-        if produto in self.produtos:
-            self.produtos[produto] += quantidade
-        else:
-            self.produtos[produto] = quantidade
+        self.produtos.append({"produto": produto, "quantidade": quantidade})
         self.valor_total_da_venda += produto.valor * quantidade
+
+    # Método para retornar um iterador para os produtos da venda
+    def __iter__(self):
+        return iter(self.produtos)
+
+def imprimir_vendas(vendas):
+    print("==== VENDAS REALIZADAS ====\n")
+    for venda in vendas:
+        print(f"ID da Venda: {venda['id_venda']}")
+        print(f"Vendedor: {venda['Vendedor']}")  # Correção aqui, trocar para 'Vendedor'
+        print(f"CPF do Comprador: {venda['CPF do Comprador']}")
+        print(f"Data da Venda: {venda['Data da Venda']}")
+        print("Produtos:")
+        for produto in venda['Produtos']:
+            print(f"- {produto['nome_do_produto']} (Quantidade: {produto['quantidade']})")
+        print(f"Total da Venda: R${venda['total_da_venda']:.2f}")
+        print("============================\n")
 
 
 # Mock de vendas (mantemos o mesmo do exemplo anterior)
 vendas = [
     {
         "id_venda": 1001,
-        "Nome do Vendedor": vendedores[0].nome,
+        "Vendedor": vendedores[0].nome,
         "CPF do Comprador": "123.456.789-10",
         "Data da Venda": "01/07/2023",
         "Produtos": [
@@ -85,7 +95,7 @@ vendas = [
     },
     {
     "id_venda": 1002,
-    "Nome do Vendedor": vendedores[1].nome,
+    "Vendedor": vendedores[1].nome,
     "CPF do Comprador": "987.654.321-00",
     "Data da Venda": "10/07/2023",
     "Produtos": [
@@ -100,7 +110,7 @@ vendas = [
 },
 {
     "id_venda": 1003,
-    "Nome do Vendedor": vendedores[2].nome,
+    "Vendedor": vendedores[2].nome,
     "CPF do Comprador": "111.222.333-44",
     "Data da Venda": "15/07/2023",
     "Produtos": [
@@ -127,7 +137,7 @@ vendas = [
 },
 {
     "id_venda": 1004,
-    "Nome do Vendedor": vendedores[0].nome,
+    "Vendedor": vendedores[0].nome,
     "CPF do Comprador": "555.666.777-88",
     "Data da Venda": "20/07/2023",
     "Produtos": [
@@ -154,7 +164,7 @@ vendas = [
 },
 {
     "id_venda": 1005,
-    "Nome do Vendedor": vendedores[1].nome,
+    "Vendedor": vendedores[1].nome,
     "CPF do Comprador": "999.888.777-66",
     "Data da Venda": "25/07/2023",
     "Produtos": [
@@ -175,7 +185,7 @@ vendas = [
 },
 {
     "id_venda": 1006,
-    "Nome do Vendedor": vendedores[3].nome,
+    "Vendedor": vendedores[3].nome,
     "CPF do Comprador": "777.888.999-00",
     "Data da Venda": "01/08/2023",
     "Produtos": [
@@ -196,7 +206,7 @@ vendas = [
 },
 {
     "id_venda": 1007,
-    "Nome do Vendedor": vendedores[2].nome,
+    "Vendedor": vendedores[2].nome,
     "CPF do Comprador": "333.444.555-66",
     "Data da Venda": "05/08/2023",
     "Produtos": [
@@ -211,7 +221,7 @@ vendas = [
 },
 {
     "id_venda": 1008,
-    "Nome do Vendedor": vendedores[0].nome,
+    "Vendedor": vendedores[0].nome,
     "CPF do Comprador": "999.111.222-33",
     "Data da Venda": "10/08/2023",
     "Produtos": [
@@ -232,7 +242,7 @@ vendas = [
 },
 {
     "id_venda": 1009,
-    "Nome do Vendedor": vendedores[1].nome,
+    "Vendedor": vendedores[1].nome,
     "CPF do Comprador": "111.222.333-44",
     "Data da Venda": "15/08/2023",
     "Produtos": [
@@ -253,7 +263,7 @@ vendas = [
 },
 {
     "id_venda": 1010,
-    "Nome do Vendedor": vendedores[2].nome,
+    "Vendedor": vendedores[2].nome,
     "CPF do Comprador": "444.555.666-77",
     "Data da Venda": "20/08/2023",
     "Produtos": [
@@ -279,17 +289,3 @@ vendas = [
     "total_da_venda": (produtos[1].valor * 4) + produtos[8].valor + (produtos[11].valor * 3)
 }
 ]
-
-def imprimir_vendas(vendas):
-    print("==== VENDAS REALIZADAS ====\n")
-    for venda in vendas:
-        print(f"ID da Venda: {venda['id_venda']}")
-        print(f"Nome do Vendedor: {venda['Nome do Vendedor']}")
-        print(f"CPF do Comprador: {venda['CPF do Comprador']}")
-        print(f"Data da Venda: {venda['Data da Venda']}")
-        print("Produtos:")
-        for produto in venda['Produtos']:
-            print(f"- {produto['nome_do_produto']} (Quantidade: {produto['quantidade']})")
-        print(f"Total da Venda: R${venda['total_da_venda']:.2f}")
-        print("============================\n")
-
