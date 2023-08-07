@@ -30,7 +30,6 @@ def validar_data(data):
     except ValueError:
         return False
 
-# ... (Código anterior)
 
 # Função para incluir uma nova venda
 def inclui_venda():
